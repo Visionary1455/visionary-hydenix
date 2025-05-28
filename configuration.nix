@@ -71,7 +71,6 @@ in
           inputs.hydenix.lib.homeModules
           # Nix-index-database - for comma and command-not-found
           inputs.nix-index-database.hmModules.nix-index
-          ./home.nix
           ./modules/hm
         ];
       };
@@ -86,28 +85,23 @@ in
     timezone = "Asia/Shanghai"; # Change to your timezone
     locale = "zh_CN.UTF-8"; # Change to your preferred locale
 
-    /*
-      Optionally edit the below values, or leave to use hydenix defaults
-      visit ./modules/hm/default.nix for more options
-
-      audio.enable = true; # enable audio module
-      boot = {
-        enable = true; # enable boot module
-        useSystemdBoot = true; # disable for GRUB
-        grubTheme = pkgs.hydenix.grub-retroboot; # or pkgs.hydenix.grub-pochita
-        grubExtraConfig = ""; # additional GRUB configuration
-        kernelPackages = pkgs.linuxPackages_zen; # default zen kernel
-      };
-      gaming.enable = true; # enable gaming module
-      hardware.enable = true; # enable hardware module
-      network.enable = true; # enable network module
-      nix.enable = true; # enable nix module
-      sddm = {
-        enable = true; # enable sddm module
-        theme = pkgs.hydenix.sddm-candy; # or pkgs.hydenix.sddm-corners
-      };
-      system.enable = true; # enable system module
-    */
+    audio.enable = true; # enable audio module
+    boot = {
+      enable = true; # enable boot module
+      useSystemdBoot = true; # disable for GRUB
+      grubTheme = pkgs.hydenix.grub-retroboot; # or pkgs.hydenix.grub-pochita
+      grubExtraConfig = ""; # additional GRUB configuration
+      kernelPackages = pkgs.linuxPackages_zen; # default zen kernel
+    };
+    gaming.enable = true; # enable gaming module
+    hardware.enable = true; # enable hardware module
+    network.enable = true; # enable network module
+    nix.enable = true; # enable nix module
+    sddm = {
+      enable = true; # enable sddm module
+      theme = pkgs.hydenix.sddm-candy; # or pkgs.hydenix.sddm-corners
+    };
+    system.enable = true; # enable system module
   };
 
   #! EDIT THESE VALUES (must match users defined above)

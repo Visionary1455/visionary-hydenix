@@ -33,7 +33,7 @@
           inherit inputs;
         };
         modules = [
-          ./host/configuration.nix
+          ./configuration.nix
         ];
       };
 
